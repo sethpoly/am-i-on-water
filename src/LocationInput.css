@@ -1,0 +1,48 @@
+.container-inputs{
+ 
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-left: 60px;
+
+    border-radius: 20px;
+}
+ .label-input{
+    display: block;
+    padding-bottom: 4px;
+
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 16px;
+}
+.input-box{
+    padding:10px;
+    width: 200px;
+
+    border: none;
+    border-radius: 5px;
+    background: #FFF;
+    outline: none;
+}
+.container-input{
+    margin-bottom: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+@media only screen and (max-width: 800px) {
+    .container-inputs{
+        width: 90%;
+        padding-left: 50px;
+    }
+
+
+}

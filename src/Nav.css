@@ -1,0 +1,85 @@
+.nav-bar{
+    position: relative;
+    width: 70%;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 30px;
+  
+    background-color: transparent;
+    z-index:1;
+  }
+  .nav-bar a{
+    float: right;
+    display: block;
+    text-align: center; 
+    
+    color: #FFF; 
+    text-decoration: none; 
+    font-size: 48px; 
+  }
+  .logo-image{
+    float: left;
+    padding: 10px 15px;
+  }
+  #nav-search{
+    width: 100%;
+    height: 15px;
+    margin-left: 20px;
+    padding: 10px;
+    padding-left: 28px;
+    float: left;
+  
+    border-radius: 10px;
+    border: none;
+    background: #242323;
+    color: #FFF;
+    font-size: 14px;
+    outline: none;
+  }
+  #login-btn{
+    padding: 10px 18px;
+
+    border: #5b5b5b solid 1px;
+    border-radius: 23px;
+    background: #5b5b5b;
+  }
+  #login-btn:hover{
+    cursor: pointer;
+    background: #FFF;
+    color:#242323;
+    border-color: #FFF;
+  }
+  .nav-item{
+    padding: 10px 30px;
+  }
+  .logo-search{
+    position: absolute;
+    left: 22px;
+    bottom: 4px;
+    
+    background: transparent;
+    filter: invert(43%) sepia(26%) saturate(1407%)
+    hue-rotate(314deg) brightness(86%) contrast(90%);
+  }
+  .search-container{
+    position: relative;
+    width: 30%;
+    display: block;
+    float: left;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav-bar{
+      width: 90%;
+    }
+    .search-container{
+      width: 25%;
+    }
+    .nav-bar a{
+      font-size: 12px;
+    }
+  }
+  
+  
+  

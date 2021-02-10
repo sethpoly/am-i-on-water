@@ -1,0 +1,35 @@
+.home-header-container{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding-left: 40px;
+}
+.header-title{
+    width: 100%;
+
+    color: #FFF;
+    font-size: 70px;
+    font-weight: 500;
+}
+.subheader-title{
+    width: 100%;
+    margin-top: -40px;
+
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 100;
+}
+
+@media only screen and (max-width: 800px) {
+    .home-header-container{
+        width: 90%;
+        margin-top: 0;
+    }
+    .header-title{
+        font-size: 45px;
+    }
+    .subheader-title{
+        font-size: 25px;
+        padding-top: 10px;
+    }
+  }
