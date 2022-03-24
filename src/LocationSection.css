@@ -1,11 +1,18 @@
 #mapid{
   height: 300px;
   width: 600px;
-
+  margin: 0 auto;
+}
+#result-container {
+  width: 70%;
+  text-align: center;
   margin: 0 auto;
   margin-top: 50px;
 }
-
+#result {
+  color: #FFF;
+  font-size: 48px;
+}
 .button-container{
   width: 69%;
   margin: 0 auto;

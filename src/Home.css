@@ -2,6 +2,7 @@
     width: 100%;
     background: rgb(45,66,253);
     background: linear-gradient(0deg, rgba(45,66,253,1) 16%, rgba(34,193,195,1) 87%);
+    padding-bottom: 50px;
 }
 .custom-shape-divider-top-1612709491 {
     position: absolute;

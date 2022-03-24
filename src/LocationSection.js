@@ -117,9 +117,12 @@ function LocationSection() {
     fetch('https://api.onwater.io/api/v1/results/' + lat + ',' + long +
    '?access_token=zSg2H86PvCAQMFKzLDXG')
   .then((response) => response.json())
-  .then((data) => console.log(data.water));
+  .then((data) => {
+    console.log(data.water);
+    setResult(data.water);
+  });
 
-  //initMap(long, lat)
+  initMap(long, lat);
 }
 
 function refreshMap(){
@@ -129,6 +132,16 @@ function refreshMap(){
     myMap.off();
     myMap.remove();
   }
+}
+
+function setResult(result) {
+  var detailedResult = "";
+  if(result) {
+    detailedResult = "You are on water.";
+  } else {
+    detailedResult = "You are not on water.";
+  }
+  document.getElementById('result').innerHTML = detailedResult;
 }
   
 
@@ -141,7 +154,11 @@ function refreshMap(){
           </span></button>
           <button id="btn-manual" onClick={submitCoordinates} className="btn-location">Submit coordinates</button>
         </div>
-        <div id="mapid"></div>
+        <div id="result-container">
+          <h1 id="result">Test</h1>
+        </div>
+        <div id="mapid">
+        </div>
       </div>
     </div>
   );
