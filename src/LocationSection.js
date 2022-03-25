@@ -119,6 +119,8 @@ function LocationSection() {
   .then((response) => response.json())
   .then((data) => {
     console.log(data.water);
+    // Hide input element
+    hideElement("input-box");
     setResult(data.water);
   });
 
@@ -135,6 +137,8 @@ function refreshMap(){
 }
 
 function setResult(result) {
+
+
   var detailedResult = "";
   if(result) {
     detailedResult = "You are on water.";
@@ -143,23 +147,31 @@ function setResult(result) {
   }
   document.getElementById('result').innerHTML = detailedResult;
 }
+
+function hideElement(elementId) {
+  var element = document.getElementById(elementId);
+  if(element.style.display === "none") {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none"
+  }
+}
   
 
   return (
     <div>
-      <div>
+      <div id="input-box">
         <LocationInput/>
         <div className="button-container">
           <button id="btn-findme" onClick={getLocation} ><span class='icon'>
           </span></button>
           <button id="btn-manual" onClick={submitCoordinates} className="btn-location">Submit coordinates</button>
         </div>
-        <div id="result-container">
-          <h1 id="result">Test</h1>
-        </div>
-        <div id="mapid">
-        </div>
       </div>
+        <div id="result-container">
+          <h1 id="result"></h1>
+          <div id="mapid"></div>
+        </div>
     </div>
   );
 }
